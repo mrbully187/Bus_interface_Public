@@ -1,3 +1,5 @@
+# This is just a readme to see a sample of the project.  The main is private
+
 # Bus Interface
 
 Local browser interface for a bus climate, safety, water, propane, and power system. It talks to an AutomationDirect CLICK PLC over Modbus TCP using clickplc and pymodbus.
