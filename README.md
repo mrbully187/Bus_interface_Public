@@ -1,5 +1,3 @@
-# This is just a readme to see a sample of the project.  The main is private
-
 # Bus Interface
 
 Local browser interface for a bus climate, safety, water, propane, and power system. It talks to an AutomationDirect CLICK PLC over Modbus TCP using clickplc and pymodbus.
@@ -115,7 +113,9 @@ Fresh-water low is `C105`, gray full is `C106`, and black full is `C107`. Those 
 
 ## Power
 
-Power shows battery voltage `DF200`, battery current `DF201`, and AC leg amps `DF203` and `DF204`. Shore power is on when shore power good `X301`, shore override `X302`, or the HMI override `C15` is on. Generator is selected on `C14` and flashes while generator run `C28` is on. Quiet time latches `C24`. Battery low `C112` and generator fault `C113` are shown here and recorded with the other equipment faults. There is no Power-page capture in `Screenshots/` yet.
+Power shows battery voltage `DF200`, battery current `DF201`, and AC leg amps `DF203` and `DF204`. HMI shore override follows `C15` and shows Off when that bit is off. Switch shore override follows `C210` and shows Off when that bit is off. Shore power is on when the shore power good latch `C209` or either override is on. Generator is selected on `C14` and flashes while generator run `C28` is on. Quiet time latches `C24`. Battery low `C112` and generator fault `C113` are shown here and recorded with the other equipment faults.
+
+![Power page with the generator selected and both shore overrides off](Screenshots/power-page.png)
 
 ## Safety
 
